@@ -1,0 +1,155 @@
+:root {
+    --softblue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --vdbluemain: hsl(217, 54%, 11%);
+    --vdbluecard: hsl(216, 50%, 16%);
+    --vdblueline: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%); 
+
+    --font-size: 18px;
+    
+    --outfit: 'Outfit', sans-serif;
+    
+  }  
+  
+  /* border box model: https://css-tricks.com/box-sizing/ */
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  /* generic styles for the page */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--outfit);
+    background-color: var(--vdbluemain);
+    color: var(--white);
+  }
+  
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    color: var(--softblue);
+  }
+
+  img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  #card {
+    margin: 10rem auto;
+    padding: 1.5rem;
+    width: 330px;
+    background-color: var(--vdbluecard);
+    border-radius: 15px;
+  }
+
+  /* make hover over a photo using another photo */
+  
+  .overlayPar {
+    position: relative;
+  }
+  
+  .imgOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(178, 100%, 50%, .4);
+    display: none;
+    border-radius: 5%;
+  }
+  
+  .eye {
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: auto;
+  }
+  
+  .equilibrium {
+    display: block;
+    border-radius: 5%;
+  }
+  
+  .overlayPar:hover .imgOverlay  {
+    display: flex;
+  }
+  
+
+
+  #card h1{
+    margin-bottom: 1rem;
+    font-size: 21px;
+    font-weight: var(--weight3);
+  }
+
+  #card p{
+    margin-bottom: 1rem;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .bar,.eth,.clock {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .bar{
+    padding: 0;
+    justify-content: space-between;
+  }
+
+  .eth p{
+    color: var(--cyan);
+    font-weight: 600; 
+  }
+
+  .line {
+    background: var(--vdblueline);
+    height: 1px;
+    margin-bottom: 1rem;
+  }
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1.2rem;
+  }
+
+  .avatar img{
+    width: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+  }
+
+  .avatar span {
+    color: var(--white);
+  }
+
+  /* Hover Section */
+
+.author a:hover {
+  color: var(--cyan);
+}
+  /* attributions  */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
